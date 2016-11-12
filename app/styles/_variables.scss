@@ -1,0 +1,35 @@
+// font face
+$wide: 'Novecento sans wide';
+$widebook: 'Novecento sans wide Book';
+$widenormal: 'Novecento sans wide Normal';
+// end font face
+
+// colors
+$dp-grey: #3d3d3d;
+$dp-darkgrey: #252525;
+$dp-blue: #169dd9;
+$dp-white: #fff;
+// end colors
+
+// grid
+$tablet: 'min-width: 768px';
+$desktop: 'min-width: 992px';
+// end grid
+
+// operational css classes
+.stopAnimation {
+  animation: none !important;
+}
+
+.dim {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  background-color: $dp-darkgrey;
+  opacity: 0.8;
+}

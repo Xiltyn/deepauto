@@ -1,0 +1,66 @@
+// set font size to default 1rem = 10px
+html {
+  font-size: 62.5%;
+}
+// end set font size
+
+.dp-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 200;
+  color: $dp-white;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  .gutter {
+    background-color: $dp-darkgrey;
+    .nav-close {
+      padding: 13px;
+      opacity: 0.6;
+    }
+    .nav-logo {
+      padding: 17px 0 0 10px;
+    }
+    &--top {
+      height: 50px;
+      margin-bottom: 2px;
+      display: flex;
+    }
+    &--bottom {
+      height: 100%;
+      margin-top: 2px;
+    }
+  }
+  ul {
+    margin: 0;
+    .nav-el {
+      height: 50px;
+      margin: 2px 0;
+      background-color: $dp-darkgrey;
+      line-height: 4rem;
+      transition: opacity 0.3s ease-out;
+    }
+    .nav-el:hover {
+      opacity: 0.3;
+    }
+  }
+}
+
+.dp-header {
+  position: relative;
+  height: 100vh;
+}
+
+.main-header {
+  height: 100%;
+  background-image: url("../images/background-min.jpg");
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  h1 {
+    margin-top: -5px;
+  }
+}
