@@ -24,20 +24,20 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <header>
-    <div class="dp-menu-btn">
+    <div class="nav-open dp-btn--menu">
       <svg class="dp-svg-darkgrey">
         <use xlink:href="symbol-defs.svg#icon-menu">
         </use>
       </svg>
     </div>
+    <div class="nav-close dp-btn--close">
+      <svg class="dp-svg-white">
+        <use xlink:href="symbol-defs.svg#icon-cross">
+        </use>
+      </svg>
+    </div>
     <div class="dp-nav dp-nav--desktop">
       <div class="gutter gutter--top gutter--right">
-        <div class="nav-close dp-close-btn">
-          <svg class="dp-svg-white">
-            <use xlink:href="symbol-defs.svg#icon-cross">
-            </use>
-          </svg>
-        </div>
         <div class="nav-logo">
           <div class="dp-logo dp-logo--small dp-logo--white">
 
@@ -66,21 +66,143 @@
           miejsce na jakiś tekst
         </h1>
       </div>
-      <div class="dp-scroll-btn">
+    </div>
+    <div class="dp-btn--scroll">
+      <a href="#scroll-latest">
         <svg class="dp-svg-blue">
           <use xlink:href="symbol-defs.svg#icon-circle-down">
           </use>
         </svg>
-      </div>
-      <div class="dp-scroll-btn dp-scroll-btn--pulse">
-        <svg class="dp-svg-blue">
-          <use xlink:href="symbol-defs.svg#icon-circle-down">
-          </use>
-        </svg>
-      </div>
+      </a>
+    </div>
+    <div class="dp-btn--scroll dp-btn--scroll--pulse">
+      <svg class="dp-svg-blue dp-animation--pulse">
+        <use xlink:href="symbol-defs.svg#icon-circle-down">
+        </use>
+      </svg>
     </div>
   </section>
 
+  <section id="scroll-latest" class="container-fluid dp-latest">
+    <div class="row latest-header">
+      <div class="col-xs-12 text-center">
+        <h2 class="dp-txt dp-txt--md dp-txt--blue">
+          najnowsze oferty
+        </h2>
+      </div>
+    </div>
+    <div class="row latest-gallery">
+      <div class="dp-carousel">
+        <div class="carousel-nav">
+          <svg class="dp-svg-blue">
+            <use xlink:href="symbol-defs.svg#icon-circle-left">
+            </use>
+          </svg>
+          <svg class="dp-svg-blue">
+            <use xlink:href="symbol-defs.svg#icon-circle-right">
+            </use>
+          </svg>
+        </div>
+        <ul class="dp-list carousel-wrapper">
+          <li class="carousel-el">
+            <img src="images/gallery/gallery_1.jpg" alt="" />
+            <ul class="dp-list el-data text-center">
+              <li>
+                marka 1
+              </li>
+              <li class="value">
+                  BMW
+              </li>
+              <li>
+                rok produkcji
+              </li>
+              <li class="value">
+                  2010
+              </li>
+              <li>
+                dane techniczne
+              </li>
+              <li class="value">
+                  Moc silnika : xyz | Maksymalna prędkość : 200km/h | Napęd : Tył | Przebieg : 20 000 km | Stan : idealny
+              </li>
+              <li>
+                cena
+              </li>
+              <li class="value">
+                  50 000,-
+              </li>
+            </ul>
+          </li>
+
+
+
+          <li class="carousel-el">
+            <img src="images/gallery/gallery_1.jpg" alt="" />
+            <ul class="dp-list el-data text-center">
+              <li>
+                marka 2
+              </li>
+              <li class="value">
+                  BMW
+              </li>
+              <li>
+                rok produkcji
+              </li>
+              <li class="value">
+                  2010
+              </li>
+              <li>
+                dane techniczne
+              </li>
+              <li class="value">
+                  Moc silnika : xyz | Maksymalna prędkość : 200km/h | Napęd : Tył | Przebieg : 20 000 km | Stan : idealny
+              </li>
+              <li>
+                cena
+              </li>
+              <li class="value">
+                  50 000,-
+              </li>
+            </ul>
+          </li>
+
+          <li class="carousel-el">
+            <img src="images/gallery/gallery_1.jpg" alt="" />
+            <ul class="dp-list el-data text-center">
+              <li>
+                marka 3
+              </li>
+              <li class="value">
+                  BMW
+              </li>
+              <li>
+                rok produkcji
+              </li>
+              <li class="value">
+                  2010
+              </li>
+              <li>
+                dane techniczne
+              </li>
+              <li class="value">
+                  Moc silnika : xyz | Maksymalna prędkość : 200km/h | Napęd : Tył | Przebieg : 20 000 km | Stan : idealny
+              </li>
+              <li>
+                cena
+              </li>
+              <li class="value">
+                  50 000,-
+              </li>
+            </ul>
+          </li>
+
+
+
+
+        </ul>
+      </div>
+    </div>
+  </section>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

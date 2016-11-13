@@ -22,7 +22,6 @@ $desktop: 'min-width: 992px';
 }
 
 .dim {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -31,5 +30,6 @@ $desktop: 'min-width: 992px';
   pointer-events: none;
   z-index: 50;
   background-color: $dp-darkgrey;
-  opacity: 0.8;
+  opacity: 0;
+  transition: all 0.2s ease-out;
 }
