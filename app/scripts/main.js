@@ -19,7 +19,6 @@
     });
   }
 
-
   function navControl() {
     let $btnOpen = $('.dp-btn--menu');
     let $btnClose = $('.dp-btn--close');
@@ -64,12 +63,51 @@
     };
   }
 
+  function initiateCarousel() {
+    let $btns = $('.carousel-btn')
+    let $left = $('.carousel-btn--left')
+    let $right = $('.carousel-btn--right')
+    let objectWidth = $('.carousel-el').width()
+    let $wrapper = $('.carousel-wrapper')
+
+    $btns.on('click', function() {
+      let actualPosition = $wrapper.css('transform').split(', ')[4]
+      let $th = $(this)
+      let direction = isBtnValid($th)
+
+      console.log(actualPosition + " " + objectWidth + " " + parseInt(actualPosition) - parseInt(objectWidth) );
+
+      if (direction == "left") {
+        let moveBy = actualPosition - objectWidth
+        console.log(moveBy);
+        $wrapper.css("transform", "matrix(1, 0, 0, 1, " + moveBy + ", 0)");
+      } else if (direction == "right") {
+        let moveBy = objectWidth + actualPosition
+        console.log(moveBy);
+        $wrapper.css("transform", "matrix(1, 0, 0, 1, " + moveBy + ", 0)");
+      } else {
+        return
+      }
+    })
+
+    function isBtnValid(el) {
+      if (el.is($left)) {
+        return "right";
+      } else if (el.is($right)) {
+        return "left";
+      } else {
+        return
+      }
+    }
+  }
+
 
 
   // Global callbacks
   // ==============================================================::||:>
   scrollToElement();
   navControl();
+  initiateCarousel();
 
 
 })(window.$);
