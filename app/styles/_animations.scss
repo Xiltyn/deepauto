@@ -5,3 +5,25 @@
   80% {transform: scale(1.5); opacity: 0;}
   100% {transition: scale(1); opacity: 0;}
 }
+
+.dp-animation--pulse {
+  animation: dp-pulse 2s infinite;
+}
+
+@keyframes dp-shrinkOut {
+  0% {transform: rotate(0deg) scale(1);}
+  100% {transform: rotate(180deg) scale(0);}
+}
+
+.dp-animation--shrinkOut {
+  animation: dp-shrinkOut 0.4s forwards;
+}
+
+@keyframes dp-shrinkIn {
+  0% {transform: rotate(-180deg) scale(0);}
+  100% {transform: rotate(0deg) scale(1);}
+}
+
+.dp-animation--shrinkIn {
+  animation: dp-shrinkIn 0.4s forwards;
+}
