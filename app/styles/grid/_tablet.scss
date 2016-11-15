@@ -1,5 +1,27 @@
 @media screen and ($tablet) {
-  .main-header {
-    background-size: cover;
+  // set font size to default 1rem = 10px
+  html {
+    font-size: 100%;
   }
+  // end set font size
+
+  .main-header {
+    background-size: auto 100%;
+  }
+
+  .dp-nav {
+    width: 300px;
+    .gutter {
+      .nav-logo {
+        padding: 17px 0 0 155px;
+      }
+    }
+    ul {
+      .nav-el {
+        height: 70px;
+      }
+    }
+  }
+
+
 }

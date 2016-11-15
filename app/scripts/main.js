@@ -33,40 +33,23 @@
     let $btnClose = $('.dp-btn--close');
     let $menu = $('.dp-nav')
     let $dim = $('.dim')
+    let inactive = {'opacity': 0, 'pointer-events': 'none'}
+    let active = {'opacity': 1, 'pointer-events': 'all'}
+    let dimmed = {'opacity': 0.8, 'pointer-events': 'all'}
 
     $btnOpen.on('click', function() {
 
       if (menuIsOpen() == true) {
-        $menu.css(
-          {
-            'opacity': '0',
-            'pointer-events': 'none'
-          }
-        );
-        $dim.css(
-          {
-            'opacity': '0',
-            'pointer-events': 'none'
-          }
-        );
+        $menu.css(inactive);
+        $dim.css(inactive);
         $btnOpen.find('svg').addClass('dp-animation--shrinkIn')
                             .removeClass('dp-animation--shrinkOut');
         $btnClose.find('svg').addClass('dp-animation--shrinkOut')
                              .removeClass('dp-animation--shrinkIn');
 
       } else {
-        $menu.css(
-          {
-            'opacity': '1',
-            'pointer-events': 'all'
-          }
-        );
-        $dim.css(
-          {
-            'opacity': '0.8',
-            'pointer-events': 'all'
-          }
-        );
+        $menu.css(active);
+        $dim.css(dimmed);
         $btnOpen.find('svg').addClass('dp-animation--shrinkOut')
                             .removeClass('dp-animation--shrinkIn');
         $btnClose.find('svg').addClass('dp-animation--shrinkIn')
@@ -74,18 +57,8 @@
       }
 
       $dim.on('click', function() {
-        $menu.css(
-          {
-            'opacity': '0',
-            'pointer-events': 'none'
-          }
-        );
-        $dim.css(
-          {
-            'opacity': '0',
-            'pointer-events': 'none'
-          }
-        );
+        $menu.css(inactive);
+        $dim.css(inactive);
         $btnOpen.find('svg').addClass('dp-animation--shrinkIn')
                             .removeClass('dp-animation--shrinkOut');
         $btnClose.find('svg').addClass('dp-animation--shrinkOut')
@@ -114,6 +87,8 @@
     let $right = $('.carousel-btn--right')
     let $wrapper = $('.carousel-wrapper')
 
+    setWrapperWidth();
+    setInitialFocus();
     setFocus();
 
     $btns.on('click', function() {
@@ -145,6 +120,31 @@
 
       }
     })
+
+    function setWrapperWidth() {
+      let $objects = $('.carousel-el')
+      let objectWidth = $objects.width()
+      let elementsNumber = countElements($objects)
+      let wrapperWidth = elementsNumber * objectWidth
+
+      $wrapper.css('width', wrapperWidth);
+
+    }
+
+    function setInitialFocus() {
+      let $objects = $('.carousel-el')
+      let elementsNumber = countElements($objects)
+      let middleElement = ~~( elementsNumber / 2 )
+
+      $objects.each(function() {
+        let $th = $(this)
+
+        if ($th.index() == middleElement) {
+          $th.addClass('focus')
+        }
+      })
+
+    }
 
     function setFocus() {
       var index;
@@ -180,7 +180,7 @@
       }
     }
 
-    function changeFocus(status, callback) {
+    function changeFocus(status) {
       const focus = $('.focus')
       let next = focus.next()
       let prev = focus.prev()
@@ -198,7 +198,6 @@
       } else {
         return
       }
-      callback;
     }
 
     function blockNav() {
@@ -221,6 +220,16 @@
 
 
       }
+    }
+
+    function countElements(el) {
+      let count = 0
+
+      for (var i = 0; i < el.length; i++) {
+        count++
+      }
+      return count
+
     }
 
   }

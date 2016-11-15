@@ -7,6 +7,14 @@
     width: 140px;
     height: 20px;
   }
+  &--medium {
+    width: 280px;
+    height: 40px;
+  }
+  &--big {
+    width: 560px;
+    height: 80px;
+  }
   &--white {
     background-image: url('../images/logo-white.png');
   }
@@ -88,7 +96,6 @@
   z-index: 20;
   opacity: 1;
   transition: opacity 0.3s ease-out;
-  cursor: pointer;
   &--pulse {
     z-index: 0;
   }
@@ -104,7 +111,6 @@
   width: 32px;
   height: 32px;
   z-index: 300;
-  cursor: pointer;
 }
 // end buttons
 
@@ -130,6 +136,7 @@ svg {
 // carousel
 .dp-carousel {
   position: relative;
+  width: 100vw;
   .carousel-nav {
     position: absolute;
     width: 15rem;
@@ -139,7 +146,6 @@ svg {
     margin-top: -22rem;
     display: flex;
     z-index: 200;
-    cursor: pointer;
     svg {
       transition: all 0.3s ease-out;
       width: 2.5rem;
@@ -149,12 +155,11 @@ svg {
   }
   .carousel-wrapper {
     display: flex;
-    width: 500%;
+    // width: 500%;
     transform: translateX(0vw);
     transition: all 0.3s ease-out;
     .carousel-el {
-      width: 100%;
-      // height: 500px;
+      width: 100vw;
       .el-img {
         height: 250px;
         overflow: hidden;
@@ -193,6 +198,157 @@ svg {
       }
       .el-data {
         opacity: 1;
+      }
+    }
+  }
+}
+@media screen and ($tablet) {
+  .dp-carousel {
+    .carousel-nav {
+      margin-top: -19rem;
+    }
+    .carousel-wrapper {
+      display: -webkit-box;
+      .carousel-el {
+        .el-img {
+          height: 500px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and ($desktop) {
+  .dp-carousel {
+    position: relative;
+    .carousel-nav {
+      position: absolute;
+      width: 65%;
+      left: 17.5%;
+      top: 100%;
+      margin-left: 0;
+      margin-top: -15rem;
+      display: block;
+      z-index: 200;
+      svg {
+        transition: all 0.3s ease-out;
+        width: 2.5rem;
+        height: auto;
+        margin: 0;
+      }
+      .carousel-btn--left {
+        float: left;
+      }
+      .carousel-btn--right {
+        float: right;
+      }
+    }
+    .carousel-wrapper {
+      transform: translateX(0vw);
+      transition: all 0.3s ease-out;
+      margin-left: 25%;
+      .carousel-el {
+        width: 50vw;
+        transition: all 0.2s ease-out;
+        .el-img {
+          height: 350px;
+          img {
+            width: 80%;
+            height: auto;
+            padding-left: 10%;
+            margin-top: -10%;
+          }
+        }
+        .el-data {
+          width: 90%;
+          margin: auto;
+          padding: 3rem 2rem 0 2rem;
+          font-family: $widebook;
+          opacity: 0;
+          transition: all 0.5s ease-out;
+          li {
+            width: 100%;
+            background-color: $dp-blue;
+            font-weight: 600;
+            color: $dp-white;
+          }
+          .value {
+            color: $dp-darkgrey;
+            background-color: $dp-white;
+            font-weight: 100;
+          }
+        }
+      }
+      .focus {
+        transform: translateY(40px);
+        padding: 0;
+        .el-img {
+          height: 350px;
+          img {
+            padding: 0;
+            opacity: 1;
+            width: 100%;
+            height: auto;
+          }
+        }
+        .el-data {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and ($largeDesktop) {
+  .dp-carousel {
+    position: relative;
+    .carousel-nav {
+      position: absolute;
+      width: 60%;
+      left: 20%;
+      top: 100%;
+      margin-left: 0;
+      margin-top: -15rem;
+      display: block;
+      z-index: 200;
+      svg {
+        transition: all 0.3s ease-out;
+        width: 2.5rem;
+        height: auto;
+        margin: 0;
+      }
+      .carousel-btn--left {
+        float: left;
+      }
+      .carousel-btn--right {
+        float: right;
+      }
+    }
+    .carousel-wrapper {
+      .carousel-el {
+        .el-data {
+          padding: 5rem 2rem 0 2rem;
+        }
+      }
+      .focus {
+        transform: translateY(40px);
+        padding: 0;
+        .el-img {
+          height: 450px;
+          img {
+            padding: 0;
+            opacity: 1;
+            width: 100%;
+            height: auto;
+          }
+        }
+        .el-data {
+          opacity: 1;
+        }
       }
     }
   }
