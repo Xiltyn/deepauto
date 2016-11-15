@@ -125,17 +125,17 @@
       let focus = $('focus')
 
 
-      if (direction == "left") {
+      if (direction == 'left') {
         let moveBy = actualPosition - objectWidth
 
-        $wrapper.css("transform", "matrix(1, 0, 0, 1, " + moveBy + ", 0)");
+        $wrapper.css('transform', 'matrix(1, 0, 0, 1, ' + moveBy + ', 0)');
         changeFocus(direction);
         blockNav(focus)
 
-      } else if (direction == "right") {
+      } else if (direction == 'right') {
         let moveBy = objectWidth + actualPosition
 
-        $wrapper.css("transform", "matrix(1, 0, 0, 1, " + moveBy + ", 0)");
+        $wrapper.css('transform', 'matrix(1, 0, 0, 1, ' + moveBy + ', 0)');
         changeFocus(direction);
         blockNav(focus)
 
@@ -163,16 +163,16 @@
 
         let moveBy = !objectWidth - objectWidth * index
 
-        $wrapper.css("transform", "matrix(1, 0, 0, 1, " + moveBy + ", 0)");
+        $wrapper.css('transform', 'matrix(1, 0, 0, 1, ' + moveBy + ', 0)');
 
     }
 
     function isBtnValid(el) {
       if (el.is($left)) {
-        return "right";
+        return 'right';
 
       } else if (el.is($right)) {
-        return "left";
+        return 'left';
 
       } else {
         return
@@ -189,10 +189,10 @@
 
       focus.removeClass('focus')
 
-      if (status == "left") {
+      if (status == 'left') {
         next.addClass('focus')
 
-      } else if (status == "right") {
+      } else if (status == 'right') {
         prev.addClass('focus')
 
       } else {
