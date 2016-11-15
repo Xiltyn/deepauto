@@ -18,6 +18,12 @@ body {
   div {
     max-width: 100vw !important;
   }
+  // reset link decoration
+  a {
+    font-size: none;
+    text-decoration: none;
+  }
+  // end reset link decoration
 }
 // end max-width overflow block
 

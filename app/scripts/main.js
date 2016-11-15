@@ -37,6 +37,8 @@
     let active = {'opacity': 1, 'pointer-events': 'all'}
     let dimmed = {'opacity': 0.8, 'pointer-events': 'all'}
 
+    fixMenuOnScroll();
+
     $btnOpen.on('click', function() {
 
       if (menuIsOpen() == true) {
@@ -72,7 +74,22 @@
       } else {
         return true
       }
-    };
+    }
+
+    function fixMenuOnScroll() {
+      let scrollTop = $(window).scrollTop(),
+      $rankingOffset = $('.dp-nav').offset().top,
+      $distanceRanking = $rankingOffset;
+
+      var $scrollRanking = $(window).scroll(function() {
+        let  $ranking = ($distanceRanking - scrollTop);
+          if ($scrollRanking.scrollTop() > $ranking) {
+              $('.dp-nav').addClass('fixed')
+          } else {
+              $('.dp-nav').removeClass('fixed')
+          }
+      });
+    }
   }
 
   // ======================= END NAVIGATION =====================::||:>

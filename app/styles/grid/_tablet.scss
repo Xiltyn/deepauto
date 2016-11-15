@@ -23,5 +23,19 @@
     }
   }
 
+  .dp-footer {
+    margin-top: 150px;
+    .dp-logo {
+      &--medium {
+        display: none;
+      }
+      &--big {
+        margin-left: -280px;
+        top: -79px;
+        display: block;
+      }
+    }
+  }
+
 
 }

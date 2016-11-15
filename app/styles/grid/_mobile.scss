@@ -100,3 +100,70 @@ html {
     overflow: hidden;
   }
 }
+
+.dp-footer {
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
+  background-color: $dp-darkgrey;
+  .container {
+    padding: 15px;
+    .row {
+      margin: 0;
+      .col-xs-12, .col-md-6 {
+        padding: 0;
+      }
+    }
+  }
+  .dp-logo {
+    position: absolute;
+    left: 50%;
+    &--medium {
+      margin-left: -140px;
+      top: -40px;
+    }
+    &--big {
+      display: none;
+    }
+  }
+  .dp-breadcrumb {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    h3 {
+      padding-bottom: 10px;
+      border-bottom: 0.1rem solid $dp-white;
+      font-weight: 600;
+      width: 90%;
+      margin: auto;
+    }
+    ul {
+      margin-top: 15px;
+      li:first-of-type {
+        padding-top: 1.2rem;
+      }
+      li {
+        height: 1.2rem;
+        padding: 0.2rem 0;
+        opacity: 0.6;
+        transition: all 0.2s ease-out;
+      }
+      li:hover {
+        opacity: 1;
+      }
+    }
+    .breadcrumb-data {
+      li {
+        cursor: default;
+      }
+      li:nth-of-type(odd) {
+        font-weight: 600;
+        padding-bottom: 0;
+        opacity: 1;
+      }
+      li:nth-of-type(even) {
+        padding-top: 0;
+      }
+    }
+  }
+}
