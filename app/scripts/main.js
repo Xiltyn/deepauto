@@ -114,7 +114,7 @@
     let $right = $('.carousel-btn--right')
     let $wrapper = $('.carousel-wrapper')
 
-    setInitialFocus();
+    setFocus();
 
     $btns.on('click', function() {
       let $objects = $('.carousel-el')
@@ -128,15 +128,15 @@
       if (direction == 'left') {
         let moveBy = actualPosition - objectWidth
 
-        $wrapper.css('transform', 'matrix(1, 0, 0, 1, ' + moveBy + ', 0)');
         changeFocus(direction);
+        setFocus();
         blockNav(focus)
 
       } else if (direction == 'right') {
         let moveBy = objectWidth + actualPosition
 
-        $wrapper.css('transform', 'matrix(1, 0, 0, 1, ' + moveBy + ', 0)');
         changeFocus(direction);
+        setFocus();
         blockNav(focus)
 
       } else {
@@ -146,7 +146,7 @@
       }
     })
 
-    function setInitialFocus() {
+    function setFocus() {
       var index;
       let $objects = $('.carousel-el')
       let objectWidth = $objects.width()
@@ -180,7 +180,7 @@
       }
     }
 
-    function changeFocus(status) {
+    function changeFocus(status, callback) {
       const focus = $('.focus')
       let next = focus.next()
       let prev = focus.prev()
@@ -198,25 +198,26 @@
       } else {
         return
       }
+      callback;
     }
 
     function blockNav() {
       let $objects = $('.carousel-el')
       let first = $objects.first()
       let last = $objects.last()
-      // let last = $('.carousel-wrapper li:last')
-      // let first = $('.carousel-wrapper li:first')
+      let inactive = {'opacity': 0, 'pointer-events': 'none'}
+      let active = {'opacity': 1, 'pointer-events': 'all'}
 
 
       if (first.hasClass('focus')) {
-        $left.css('opacity', 0)
+        $left.css(inactive)
 
       } else if (last.hasClass('focus')) {
-        $right.css('opacity', 0)
+        $right.css(inactive)
 
       } else if (!first.hasClass('focus') && !last.hasClass('focus')){
-        $left.css('opacity', 1)
-        $right.css('opacity', 1)
+        $left.css(active)
+        $right.css(active)
 
 
       }
