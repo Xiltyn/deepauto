@@ -118,14 +118,12 @@
 
 
       if (direction == 'left') {
-        let moveBy = actualPosition - objectWidth
 
         changeFocus(direction);
         setFocus();
         blockNav(focus)
 
       } else if (direction == 'right') {
-        let moveBy = objectWidth + actualPosition
 
         changeFocus(direction);
         setFocus();

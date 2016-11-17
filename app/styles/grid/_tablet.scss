@@ -1,12 +1,17 @@
 @media screen and ($tablet) {
   // set font size to default 1rem = 10px
   html {
-    font-size: 100%;
+    font-size: 110%;
   }
   // end set font size
 
   .main-header {
     background-size: auto 100%;
+    &--offer {
+      h1 {
+        margin-top: 46.5vh;
+      }
+    }
   }
 
   .dp-nav {

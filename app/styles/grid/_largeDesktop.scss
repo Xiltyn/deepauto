@@ -1,0 +1,67 @@
+@media screen and ($largeDesktop) {
+  .main-header {
+    &--offer {
+      h1 {
+        margin-top: 30vh;
+      }
+    }
+  }
+
+  .dp-offer {
+    .offer-content {
+      .dp-card-wrapper {
+        position: relative;
+        .dp-card {
+          padding: 0;
+          height: 500px;
+          margin: 5rem 0 0 0;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          &--element {
+            height: auto !important;
+            box-shadow: none;
+            margin: 0;
+          }
+          .card-image {
+            position: absolute;
+            top: 5rem;
+            left: -41vw;
+            height: inherit;
+            width: 40vw;
+            overflow: hidden;
+            img {
+              margin: 0;
+              box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+              height: 500px;
+              width: auto;
+            }
+          }
+          .card-details {
+            ul {
+              padding: 0.3rem 0;
+              li {
+                padding: 0.2rem 0;
+                font-size: 1rem;
+                .key {
+                  width: 12rem;
+                  padding: 0.2rem 0.5rem 0.2rem 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .offer-nav {
+      .nav-btn {
+        &--left {
+          left: 16rem;
+        }
+        &--right {
+          left: 100%;
+          margin-left: -18rem;
+        }
+      }
+    }
+  }
+
+}
