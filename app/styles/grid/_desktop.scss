@@ -32,6 +32,7 @@
     pointer-events: all;
     display: flex;
     transition: none;
+    z-index: 50;
     .gutter {
       position: relative;
       .nav-logo {
@@ -183,6 +184,75 @@
         &--right {
           left: 100%;
           margin-left: -18rem;
+        }
+      }
+    }
+  }
+
+  .dp-single {
+    position: relative;
+    .single-content {
+      .dp-card-wrapper {
+        position: relative;
+        .dp-card {
+          padding: 0;
+          height: 500px;
+          margin: 5rem 0 0 0;
+          // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          &--element {
+            height: auto !important;
+            box-shadow: none;
+            margin: 0;
+          }
+          .card-image {
+            position: absolute;
+            top: 5rem;
+            left: -41vw;
+            height: inherit;
+            width: 40vw;
+            overflow: hidden;
+            img {
+              margin: 0;
+              box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+              height: 500px;
+              width: auto;
+            }
+          }
+          .card-details {
+            ul {
+              padding: 0.3rem 0;
+              li {
+                padding: 0.25rem 0;
+                font-size: 0.7rem;
+                .key {
+                  padding: 0 0.5rem 0 0.2rem;
+                  width: 8rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .card-gallery {
+        padding-left: 2rem;
+        margin-bottom: 10rem;
+        .gallery-element {
+          img {
+            margin-top: -10%;
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .card-info {
+      position: absolute;
+      top: 85vh;
+      left: -0.8rem;
+      .para {
+        p {
+          font-size: 0.8rem;
+          line-height: 1rem;
         }
       }
     }

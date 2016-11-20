@@ -22,16 +22,3 @@ $largeDesktop: 'min-width: 1400px';
 .stopAnimation {
   animation: none !important;
 }
-
-.dim {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 50;
-  background-color: $dp-darkgrey;
-  opacity: 0;
-  transition: all 0.2s ease-out;
-}

@@ -252,6 +252,76 @@
   // ======================== END CAROUSEL ======================::||:>
   // ============================================================::||:>
 
+  // ============================================================::||:>
+  // ========================== LIGHTBOX ========================::||:>
+
+  function initiateLightbox() {
+    let $miniature = $('.gallery-element')
+    let $lightbox = $('.dp-lightbox')
+    let $lightboxImage = $lightbox.find('.image')
+    let $nav = $('.dp-lightbox .nav .nav-btn')
+    let $dim = $('.dim')
+    let inactive = {'opacity': 0, 'pointer-events': 'none'}
+    let active = {'opacity': 1, 'pointer-events': 'all'}
+    let visible = {'opacity': 1}
+    let dimmed = {'opacity': 0.8, 'pointer-events': 'all'}
+
+
+    $miniature.on('click', function() {
+      let $th = $(this)
+      let imageSrc = $th.find('img').attr('src')
+      let container = $lightboxImage
+
+      appendImage(imageSrc, container)
+      $dim.css(dimmed)
+      $lightbox.css(visible)
+      $lightboxImage.css(active)
+      $nav.css(active)
+      initiateNav($th)
+    })
+
+    $dim.on('click', function() {
+      $dim.css(inactive)
+      $lightbox.css(inactive)
+      $lightboxImage.css(inactive)
+      $nav.css(inactive)
+    })
+
+    function appendImage(imageSrc, container) {
+      container.html('<img src="' + imageSrc + '" alt="" />');
+    }
+
+    function initiateNav(focus) {
+      let $prevBtn = $('.nav-btn--left')
+      let $nextBtn = $('.nav-btn--right')
+      let container = $lightboxImage
+
+      // console.log(nextImageSrc);
+
+      $prevBtn.on('click', function() {
+        let prev = focus.prev()
+        let prevImageSrc = prev.find('img').attr('src')
+        if (prev.length !== 0) {
+          appendImage(prevImageSrc, container)
+          focus = prev
+        }
+      })
+
+      $nextBtn.on('click', function() {
+        let next = focus.next()
+        let nextImageSrc = next.find('img').attr('src')
+        if (next.length !== 0) {
+          appendImage(nextImageSrc, container)
+          focus = next
+        }
+      })
+
+    }
+
+  }
+
+  // ======================== END LIGHTBOX ======================::||:>
+  // ============================================================::||:>
 
 
   // ============================================================::||:>
@@ -260,6 +330,7 @@
   scrollToElement();
   navControl();
   initiateCarousel();
+  initiateLightbox();
 
   // ==================== END GLOBAL CALLBACKS ==================::||:>
   // ============================================================::||:>
