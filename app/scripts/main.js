@@ -323,6 +323,29 @@
   // ======================== END LIGHTBOX ======================::||:>
   // ============================================================::||:>
 
+  // ============================================================::||:>
+  // ======================= CONTACT BUBBLES ====================::||:>
+
+  function showBubbleCaption() {
+    let $bubbles = $('.bubble')
+    let $captions = $('.bubble-caption')
+
+    $bubbles.on('mouseover', function() {
+      let $th = $(this)
+      let caption = $th.find('.bubble-caption')
+
+      if (caption.length !== 0) {
+        caption.addClass('active')
+      }
+    })
+
+    $bubbles.on('mouseout', function() {
+      $captions.removeClass('active')
+    })
+  }
+
+  // ===================== END CONTACT BUBBLES ==================::||:>
+  // ============================================================::||:>
 
   // ============================================================::||:>
   // ====================== GLOBAL CALLBACKS ====================::||:>
@@ -331,6 +354,7 @@
   navControl();
   initiateCarousel();
   initiateLightbox();
+  showBubbleCaption()
 
   // ==================== END GLOBAL CALLBACKS ==================::||:>
   // ============================================================::||:>

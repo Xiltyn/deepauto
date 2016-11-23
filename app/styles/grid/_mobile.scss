@@ -72,7 +72,7 @@ html {
   background-image: url("../images/background-min.jpg");
   background-position: bottom;
   background-attachment: fixed;
-  background-size: auto 110%;
+  background-size: cover;
   background-repeat: no-repeat;
   h1 {
     margin-top: -0.5rem;
@@ -87,12 +87,45 @@ html {
     }
   }
   &--single {
-    background-image: url("../images/offer_bg_big.jpg");
+    background-image: url("../images/single_bg.jpg");
     h1 {
       margin-top: 41vh;
     }
     p {
       margin-top: 1rem;
+    }
+  }
+  &--contact {
+    background-position: 30% center;
+    background-image: url("../images/contact_bg.jpg");
+    .col-xs-4 {
+      padding: 0;
+    }
+    .col-xs-3 {
+      padding: 0;
+    }
+    h1 {
+      margin-top: 59vh;
+      padding-bottom: 0.5rem;
+      // border-bottom: 0.2rem solid $dp-white;
+    }
+    .contact-bubbles {
+      .bubble {
+        margin-top: 5rem;
+        .dp-btn {
+          width: 50px;
+          margin: auto;
+          &--phone {
+            display: none;
+          }
+          &--envelop {
+            display: none;
+          }
+        }
+        .bubble-caption {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -214,7 +247,7 @@ html {
 
 .dp-single {
   padding-top: 5rem;
-  min-height: 100vh;
+  min-height: 100rem;
   .single-content {
     .col-xs-12 {
       padding: 0;
@@ -287,6 +320,36 @@ html {
       }
     }
   }
+}
+
+.dp-contact {
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+  .contact-content {
+    .contact-info {
+      li {
+        position: relative;
+        padding: 3rem 0 0 4rem;
+        svg {
+          width: 2rem;
+          height: 2rem;
+          position: absolute;
+          top: 3rem;
+          left: 0;
+        }
+      }
+    }
+    .contact-map {
+      margin-top: 10rem;
+      height: 250px;
+    }
+  }
+}
+#map {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .dp-sidebar {

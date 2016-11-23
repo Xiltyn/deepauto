@@ -120,6 +120,39 @@
         margin-top: 5vh;
       }
     }
+    &--contact {
+      .col-md-4 {
+        padding: 0;
+      }
+      h1 {
+        margin-top: 46vh;
+      }
+      .contact-bubbles {
+        .bubble {
+          .dp-btn {
+            &--phone {
+              display: block;
+              cursor: initial;
+            }
+            &--envelop {
+              display: block;
+              cursor: initial;
+            }
+          }
+          .bubble-caption {
+            margin-top: 1rem;
+            display: block;
+            transform: translateY(2rem);
+            opacity: 0;
+            transition: all 0.3s ease-out;
+          }
+          .active {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   .dp-header {
@@ -222,11 +255,19 @@
             ul {
               padding: 0.3rem 0;
               li {
-                padding: 0.25rem 0;
+                display: block;
+                padding: 0 0 0.5rem 0;
                 font-size: 0.7rem;
+                line-height: 0.8rem !important;
                 .key {
-                  padding: 0 0.5rem 0 0.2rem;
-                  width: 8rem;
+                  text-align: left;
+                  padding: 0;
+                  background-color: $dp-white;
+                  color: $dp-darkgrey;
+                  width: auto;
+                }
+                .value {
+                  padding: 0;
                 }
               }
             }
@@ -247,13 +288,35 @@
     }
     .card-info {
       position: absolute;
-      top: 85vh;
+      top: 55rem;
       left: -0.8rem;
       .para {
-        p {
-          font-size: 0.8rem;
-          line-height: 1rem;
+
+      }
+    }
+  }
+
+  .dp-contact {
+    .contact-content {
+      .contact-info {
+        li {
+          position: relative;
+          padding: 3rem 0 0 2.5rem;
+          p {
+            font-size: 1rem;
+          }
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+          }
         }
+      }
+      .contact-map {
+        margin-top: 1.5rem;
+        height: 450px;
       }
     }
   }
