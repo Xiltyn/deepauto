@@ -86,7 +86,7 @@
   }
   // end colors
 }
-.dp-quote--right {
+.dp-line--right {
   padding-right: 0.8rem;
   &--white {
     border-right: 0.8rem solid $dp-white;
@@ -98,7 +98,7 @@
     border-right: 0.8rem solid $dp-blue;
   }
 }
-.dp-quote--left {
+.dp-line--left {
   padding-left: 0.8rem;
   &--white {
     border-left: 0.8rem solid $dp-white;
@@ -110,6 +110,27 @@
     border-left: 0.8rem solid $dp-blue;
   }
 }
+.dp-quote {
+  position: relative;
+  svg {
+    position: absolute;
+    margin-left: -4rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  &--left {
+    padding-left: 4rem;
+  }
+  &--right {
+    padding-right: 4rem;
+  }
+  &--author {
+    width: 100%;
+    text-align: right;
+    padding: 2rem 0;
+  }
+}
+
 // end fonts
 
 // lists
@@ -201,7 +222,7 @@ svg {
     left: 50%;
     top: 100%;
     margin-left: -7.5rem;
-    margin-top: -22rem;
+    margin-top: -27rem;
     display: flex;
     z-index: 100;
     svg {
@@ -234,20 +255,25 @@ svg {
       .el-data {
         width: 90%;
         margin: auto;
-        padding: 7rem 2rem 0 2rem;
+        padding: 8rem 2rem 0 2rem;
         font-family: $widebook;
         opacity: 0;
         transition: all 0.5s ease-out;
         li {
-          width: 100%;
-          background-color: $dp-blue;
-          font-weight: 600;
-          color: $dp-white;
-        }
-        .value {
-          color: $dp-darkgrey;
-          background-color: $dp-white;
-          font-weight: 100;
+          padding-bottom: 0.5rem;
+          display: flex;
+          .key {
+            width: 12rem;
+            text-align: right;
+            padding: 0.2rem 0.5rem 0.2rem 0;
+            background-color: $dp-blue;
+            font-weight: 400;
+            color: $dp-white;
+          }
+          .value {
+            width: 100%;
+            padding-left: 0.5rem;
+          }
         }
       }
     }
@@ -266,7 +292,7 @@ svg {
 @media screen and ($tablet) {
   .dp-carousel {
     .carousel-nav {
-      margin-top: -19rem;
+      margin-top: -23.5rem;
     }
     .carousel-wrapper {
       display: -webkit-box;
@@ -277,6 +303,10 @@ svg {
             width: 100%;
             height: auto;
           }
+        }
+        .el-data {
+          width: 70%;
+          padding-top: 9rem;
         }
       }
     }
@@ -292,7 +322,7 @@ svg {
       left: 17.5%;
       top: 100%;
       margin-left: 0;
-      margin-top: -15rem;
+      margin-top: -19rem;
       display: block;
       z-index: 200;
       svg {
@@ -336,23 +366,12 @@ svg {
           }
         }
         .el-data {
-          width: 90%;
+          width: 80%;
           margin: auto;
-          padding: 3rem 2rem 0 2rem;
+          padding: 5rem 2rem 0 2rem;
           font-family: $widebook;
           opacity: 0;
           transition: all 0.5s ease-out;
-          li {
-            width: 100%;
-            background-color: $dp-blue;
-            font-weight: 600;
-            color: $dp-white;
-          }
-          .value {
-            color: $dp-darkgrey;
-            background-color: $dp-white;
-            font-weight: 100;
-          }
         }
       }
       .focus {
@@ -384,7 +403,7 @@ svg {
       left: 20%;
       top: 100%;
       margin-left: 0;
-      margin-top: -15rem;
+      margin-top: -19rem;
       display: block;
       z-index: 200;
       svg {
@@ -403,7 +422,7 @@ svg {
     .carousel-wrapper {
       .carousel-el {
         .el-data {
-          padding: 5rem 2rem 0 2rem;
+          padding: 7rem 2rem 0 2rem;
         }
       }
       .focus {

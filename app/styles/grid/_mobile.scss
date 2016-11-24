@@ -128,6 +128,15 @@ html {
       }
     }
   }
+  &--about {
+    background-image: url('../images/about_bg.jpg');
+    h1 {
+      margin-top: 39vh;
+    }
+    p {
+      margin-top: 1rem;
+    }
+  }
 }
 .container-fluid {
   .col-xs-12 {
@@ -169,14 +178,14 @@ html {
           margin-bottom: 1rem;
           padding: 0;
           background-color: $dp-white;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
         }
         .card-head {
+          background-color: $dp-darkgrey;
           height: 6rem;
           padding: 0.5rem 1rem 0 1rem;
         }
         .card-image {
-          // background-color: $dp-grey;
+          // background-color: $dp-darkgrey;
           height: 13rem;
           overflow: hidden;
           img {
@@ -186,7 +195,7 @@ html {
           }
         }
         .card-details {
-          // background-color: $dp-grey;
+          background-color: $dp-darkgrey;
           height: 22rem;
           padding: 1rem;
           display: flex;
@@ -324,7 +333,7 @@ html {
 
 .dp-contact {
   padding-top: 10rem;
-  padding-bottom: 20rem;
+  padding-bottom: 10rem;
   .contact-content {
     .contact-info {
       li {
@@ -345,11 +354,53 @@ html {
     }
   }
 }
+
 #map {
   width: 100%;
   height: 100%;
   margin: auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dp-about {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  .about-contact {
+    .contact-info {
+      display: none;
+      li {
+        position: relative;
+        padding: 3rem 0 0 4rem;
+        svg {
+          width: 2rem;
+          height: 2rem;
+          position: absolute;
+          top: 3rem;
+          left: 0;
+        }
+      }
+    }
+    .about-content {
+      .picture {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .text {
+        padding: 10rem 1rem 0 1rem;
+        p {
+          font-weight: 400;
+        }
+      }
+    }
+  }
 }
 
 .dp-sidebar {
