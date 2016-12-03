@@ -31,7 +31,7 @@
 .dp-txt {
   margin: 0;
   padding: 0;
-  text-transform: lowercase;
+  // text-transform: lowercase;
   // sizes
   &--lg {
     font-family: $widebook;
@@ -46,13 +46,13 @@
     line-height: 3.8rem;
   }
   &--sm {
-    font-family: $wide;
-    font-weight: 300;
+    font-family: $opensans;
+    font-weight: 200;
     font-size: 1.1rem;
     line-height: 1.2rem;
   }
   &--xs {
-    font-family: $wide;
+    font-family: $opensans;
     font-weight: 100;
     font-size: 0.8rem;
     line-height: 1rem;
@@ -523,8 +523,86 @@ svg {
     }
   }
 }
-
 // end lightbox
+
+// call to action
+
+.dp-cta {
+  width: 20rem;
+  height: 20rem;
+  margin: 3rem auto 0 auto;
+  // border: 1px solid $dp-darkgrey;
+  .cta-text {
+    padding: 5rem 0;
+    text-align: center;
+    h3 {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+    }
+  }
+  .cta-btn {
+    width: 80%;
+    height: 10rem;
+    cursor: pointer;
+    margin: 0 auto;
+    .wrapper {
+      border: .3rem solid $dp-blue;
+      position: relative;
+      overflow: hidden;
+      height: 4rem;
+      &--hole {
+        z-index: 50;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        // height: 100%;
+        font-style: italic;
+        padding: 1rem 0;
+        text-align: center;
+        color: $dp-white;
+        transition: all 0.4s cubic-bezier(.87,0,.13,1.01);
+      }
+    }
+    .wrapper::before {
+      transition: all 0.4s cubic-bezier(.87,0,.13,1.01);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2rem;
+      background-color: $dp-blue;
+      z-index: 0;
+    }
+    .wrapper::after {
+      transition: all 0.4s cubic-bezier(.87,0,.13,1.01);
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      width: 100%;
+      height: 2rem;
+      background-color: $dp-blue;
+      z-index: 0;
+    }
+  }
+  .cta-btn:hover {
+    .wrapper {
+      &--hole {
+        color: $dp-blue;
+      }
+    }
+    .wrapper::before {
+      top: -2rem;
+    }
+    .wrapper::after {
+      top: 4rem;
+    }
+  }
+}
+
+// end call to action
 
 // breadcrumb
 .dp-breadcrumb {
