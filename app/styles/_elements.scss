@@ -500,15 +500,15 @@ svg {
   @media screen and ($desktop) {
     .image {
       background-color: $dp-darkgrey;
-      width: 80%;
+      width: 60%;
       height: 70%;
-      margin: 5% 10% 5% 10%;
+      margin: 4.5% 20% 3.5% 20%;
       overflow: hidden;
       img {
         width: 100%;
         height: auto;
         margin-left: 0;
-        margin-top: -10%;
+        // margin-top: -10%;
       }
     }
     .nav {
