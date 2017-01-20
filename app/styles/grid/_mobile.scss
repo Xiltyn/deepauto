@@ -266,16 +266,25 @@ html {
       .dp-card {
         padding: 3rem 0;
         width: 100%;
+        // height: 600px;
         &--element {
-          margin: 0 3.5rem;
-          margin-bottom: 1rem;
+          margin: 0 2.5rem;
+          // margin-bottom: 1rem;
           padding: 0;
           background-color: $dp-white;
         }
+        .card-head {
+          background-color: $dp-darkgrey;
+          // height: 6rem;
+          padding: 0.5rem 1rem 0 1rem;
+        }
         .card-details {
-          padding: 1rem 0;
+          background-color: $dp-darkgrey;
+          height: 30rem;
+          padding: 1rem;
           display: flex;
           ul {
+            padding-top: 1rem;
             li {
               padding-bottom: 0.5rem;
               display: flex;
@@ -300,6 +309,7 @@ html {
   .card-gallery-wrapper {
     position: relative;
     .card-gallery {
+      margin-top: 4rem;
       margin-bottom: 5rem;
       overflow: hidden;
       .gallery-element {
@@ -315,8 +325,23 @@ html {
       }
     }
   }
-  .card-info {
+  .card-description {
     margin-bottom: 2rem;
+    h2 {
+      margin-bottom: 0.8rem;
+    }
+    .para {
+      margin: 0.3rem 0;
+      p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+  .card-info {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
     h2 {
       margin-bottom: 0.8rem;
     }

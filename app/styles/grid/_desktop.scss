@@ -235,66 +235,42 @@
         .dp-card {
           padding: 0;
           height: 500px;
-          margin: 5rem 0 0 0;
+          // margin: 5rem 0 0 0;
           // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
           &--element {
-            height: auto !important;
             box-shadow: none;
             margin: 0;
           }
-          .card-image {
-            position: absolute;
-            top: 5rem;
-            left: -41vw;
-            height: inherit;
-            width: 40vw;
-            overflow: hidden;
-            img {
-              margin: 0;
-              box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-              height: 500px;
-              width: auto;
-            }
+          .card-head {
+            height: auto;
           }
           .card-details {
-            ul {
-              padding: 0.3rem 0;
-              li {
-                display: block;
-                padding: 0 0 0.5rem 0;
-                // font-size: 0.7rem;
-                // line-height: 0.8rem !important;
-                .key {
-                  text-align: left;
-                  padding: 0;
-                  background-color: $dp-white;
-                  color: $dp-darkgrey;
-                  width: auto;
-                }
-                .value {
-                  padding: 0;
-                }
-              }
-            }
+            height: 430px;
+            overflow-y: scroll;
           }
         }
       }
-      .card-gallery {
-        padding-left: 2rem;
-        margin-bottom: 10rem;
-        .gallery-element {
-          img {
-            margin-top: -10%;
-            height: auto;
-            width: 100%;
+      .card-gallery-wrapper {
+        .card-gallery {
+          padding-left: 2rem;
+          margin-bottom: 10rem;
+          .gallery-element {
+            width: 33%;
+            height: 8rem;
+            margin-bottom: 1rem;
+            img {
+              margin-top: -10%;
+              height: auto;
+              width: 100%;
+            }
           }
         }
       }
     }
     .card-info {
-      position: absolute;
-      top: 55rem;
-      left: -0.8rem;
+      // // position: absolute;
+      // top: 55rem;
+      // left: -0.8rem;
       .para {
 
       }

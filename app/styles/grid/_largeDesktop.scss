@@ -21,6 +21,25 @@
       }
     }
   }
+  .dp-single {
+    position: relative;
+    .single-content {
+      .card-gallery-wrapper {
+        .card-gallery {
+          .gallery-element {
+            width: 33%;
+            height: 11rem;
+            margin-bottom: 1rem;
+            img {
+              margin-top: -10%;
+              height: auto;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .dp-offer {
     .offer-content {
